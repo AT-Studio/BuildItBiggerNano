@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">The Joke</string>
+
+    <string name="exampleJoke">Doctor: \"I\'m sorry but you suffer from a terminal illness and have only 10 to live.\"\n
+                Patient: \"What do you mean, 10? 10 what? Months? Weeks?!\"\n
+                Doctor: \"Nine.\"Doctor: \"I\'m sorry but you suffer from a terminal illness and have only 10 to live.\"\n
+                Patient: \"What do you mean, 10? 10 what? Months? Weeks?!\"\n
+                Doctor: \"Nine.\"Doctor: \"I\'m sorry but you suffer from a terminal illness and have only 10 to live.\"\n
+                Patient: \"What do you mean, 10? 10 what? Months? Weeks?!\"\nDoctor: \"Nine.\"Doctor: \"I\'m sorry but you suffer from a terminal illness and have only 10 to live.\"\n
+                Patient: \"What do you mean, 10? 10 what? Months? Weeks?!\"</string>
+</resources>

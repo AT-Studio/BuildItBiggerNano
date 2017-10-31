@@ -1,0 +1,64 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.udacity.gradle.builditbigger.paid.MainActivityFragment">
+
+    <TextView
+        android:id="@+id/instructions_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instructions"
+        ads:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp"
+        ads:layout_constraintVertical_chainStyle="packed"
+        ads:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        ads:layout_constraintRight_toRightOf="parent"
+        ads:layout_constraintBottom_toTopOf="@+id/tellJokeButton"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/tellJokeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructions_text_view"
+        android:layout_marginTop="20dp"
+        android:foreground="?attr/selectableItemBackground"
+        ads:layout_constraintVertical_chainStyle="packed"
+        ads:layout_constraintTop_toBottomOf="@+id/instructions_text_view"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="8dp"
+        ads:layout_constraintRight_toRightOf="@+id/instructions_text_view"
+        android:layout_marginLeft="8dp"
+        ads:layout_constraintLeft_toLeftOf="@+id/instructions_text_view"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" >
+
+        <TextView
+            android:id="@+id/jokeButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_text"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"/>
+
+        <ProgressBar
+            android:id="@+id/jokeProgressBar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="invisible"
+            android:layout_gravity="center"/>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
