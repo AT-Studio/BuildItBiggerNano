@@ -6,6 +6,16 @@ public class JavaJokes {
 
     public String getRandomJoke() {
 
+        Random random = new Random();
+
+        String[] jokes = getAllJokes();
+
+        return jokes[random.nextInt(3)];
+
+    }
+
+    public String[] getAllJokes() {
+
         String jokeOne = "\n" +
                 "Doctor: \"I'm sorry but you suffer from a terminal illness and have only 10 to live.\"\n" +
                 "\n" +
@@ -25,11 +35,7 @@ public class JavaJokes {
                 "\n" +
                 "Patrick: \"What school?\"";
 
-        String[] jokes = new String[]{jokeOne, jokeTwo, jokeThree};
-
-        Random random = new Random();
-
-        return jokes[random.nextInt(3)];
+        return new String[]{jokeOne, jokeTwo, jokeThree};
 
     }
 

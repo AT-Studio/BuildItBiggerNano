@@ -3,9 +3,10 @@ package com.udacity.gradle.builditbigger;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.example.JavaJokes;
+
 import junit.framework.AssertionFailedError;
 
-import org.hamcrest.core.IsNot;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,7 +41,20 @@ public class JokeTest {
             pressBack();
         }
 
-        onView(withId(R.id.jokeTextView)).check(matches(IsNot.not(withText(""))));
+        JavaJokes javaJokes = new JavaJokes();
+
+        String[] jokes = javaJokes.getAllJokes();
+
+        for (int i = 0; i < jokes.length; i++) {
+            String joke = jokes[i];
+            try {
+                onView(withId(R.id.jokeTextView)).check(matches((withText(joke))));
+                break;
+            }
+            catch (AssertionFailedError e) {
+                if (i == jokes.length - 1) throw e;
+            }
+        }
 
     }
 

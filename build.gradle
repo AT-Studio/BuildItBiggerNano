@@ -24,6 +24,7 @@ task launchAppEngine (dependsOn: ":backend:appengineRun") {
         backend.extensions.appengine.daemon = true
     }
     doLast {
+        closeAppEngine
         println "launched GCE!"
     }
 }
